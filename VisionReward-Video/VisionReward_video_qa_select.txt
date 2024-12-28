@@ -1,0 +1,29 @@
+Does the video meet all the requirements stated in the text "[[prompt]]"?
+Does the video meet most of the requirements stated in the text "[[prompt]]"?
+Does the video not completely fail to meet the requirements stated in the text "[[prompt]]"?
+Is the composition aesthetically pleasing?
+Does the composition have no obvious flaws?
+Does the camera movement have no obvious flaws?
+Are the colors not significantly unattractive?
+Is the lighting perfectly accurate?
+Does the lighting have no obvious errors?
+Is there any lighting present?
+Is the lighting exceptionally beautiful?
+Is the lighting beautiful?
+Is the lighting not unattractive?
+Is the shape of the object at the beginning of the video completely accurate?
+Does the shape of the object at the beginning have no obvious errors?
+Is the shape of the object at the beginning not chaotic?
+Is the shape of the object perfectly maintained throughout the video?
+Is the shape of the object not chaotic throughout the video?
+Is the camera motion highly dynamic?
+Is the camera motion not minimal?
+Is the smoothness of the object's movement very good?
+Is the object's movement completely realistic?
+Is the image quality very stable?
+Are the details very refined?
+Are the details not rough?
+Are the details not significantly rough?
+Are all the letters correct?
+Are there any letters present?
+Is the video content part of the physical world?

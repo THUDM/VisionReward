@@ -1,0 +1,30 @@
+Is there a human body in the image?
+Is there a human face in the image?
+Are there human hands in the image?
+Is the image symmetrical?
+Does the image avoid asymmetry?
+Is the main subject prominent?
+Does the image avoid an unclear main subject?
+Is the image very rich?
+Is the image rich?
+Is the image not monotonous? 
+Is the image not empty?
+Is the image very clear?
+Is the image clear?
+Does the image avoid being blurry?
+Does the image avoid being completely blurry?
+Are the colors bright?
+Are the colors not dark?
+Are the colors not ugly?
+Can the image evoke a very positive emotional response?
+Are the image details very exquisite?
+Does the image avoid being hard to recognize?
+Does the image avoid being fragmented?
+Is the human body in the image completely correct?
+Does the human body in the image avoid obvious errors?
+Does the human body in the image avoid serious errors?
+Does the human face avoid errors?
+Does the human face avoid serious errors?
+Are the human hands perfect?
+Does the image avoid obvious harmfulness?
+Does the image avoid serious harmfulness?

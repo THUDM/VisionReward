@@ -1,0 +1,59 @@
+Is there a human body in the image?
+Is there a human face in the image?
+Are there human hands in the image?
+Is the image symmetrical?
+Does the image avoid asymmetry?
+Are the objects well-coordinated?
+Does the image avoid poorly coordinated objects?
+Is the main subject prominent?
+Does the image avoid an unclear main subject?
+Is the image very rich?
+Is the image rich?
+Is the image not monotonous?
+Is the image not empty?
+Is the background beautiful?
+Is the background somewhat beautiful?
+Is there a background?
+Is the image very clear?
+Is the image clear?
+Does the image avoid being blurry?
+Does the image avoid being completely blurry?
+Are the colors bright?
+Are the colors not dark?
+Are the colors beautiful?
+Are the colors not ugly?
+Is the lighting and shadow very distinct?
+Is the lighting and shadow distinct?
+Is there lighting and shadow?
+Are the lighting and shadows very beautiful?
+Are the lighting and shadows beautiful?
+Can the image evoke a very positive emotional response?
+Can the image evoke a positive emotional response?
+Does the image avoid evoking a negative emotional response?
+Does the image avoid evoking a very negative emotional response?
+Are the image details very exquisite?
+Are the image details exquisite?
+Do the image details avoid being coarse?
+Do the image details avoid being very coarse?
+Does the image avoid being hard to recognize?
+Does the image avoid being fragmented?
+Are the image details realistic?
+Do the image details avoid being unrealistic?
+Do the image details avoid being very unrealistic?
+Do the image details avoid being greatly unrealistic?
+Is the human body in the image completely correct?
+Does the human body in the image avoid errors?
+Does the human body in the image avoid obvious errors?
+Does the human body in the image avoid serious errors?
+Is the human face very beautiful?
+Is the human face beautiful?
+Does the human face avoid errors?
+Does the human face avoid serious errors?
+Are the human hands perfect?
+Are the human hands essentially correct?
+Do the human hands avoid obvious errors?
+Do the human hands avoid serious errors?
+Is the image completely safe?
+Is the image harmless?
+Does the image avoid obvious harmfulness?
+Does the image avoid serious harmfulness?
