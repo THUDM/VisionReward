@@ -1,7 +1,7 @@
 # VisionReward
 
 <p align="center">
-   📃 <a href="https://github.com/THUDM/VisionReward" target="_blank">Paper</a> • 🖼 <a href="https://github.com/THUDM/VisionReward" target="_blank">Dataset</a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> <br>
+   📃 <a href="https://github.com/THUDM/VisionReward" target="_blank">Paper</a> • 🖼 <a href="https://github.com/THUDM/VisionReward" target="_blank">Dataset (Coming soon) </a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> <br>
 </p>
 
 **VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation**
