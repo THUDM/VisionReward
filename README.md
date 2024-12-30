@@ -1,19 +1,13 @@
 # VisionReward
 
+<p align="center">
+   📃 <a href="https://github.com/THUDM/VisionReward" target="_blank">Paper</a> • 🖼 <a href="https://github.com/THUDM/VisionReward" target="_blank">Dataset</a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> <br>
+</p>
+
 **VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation**
-<!-- <div align="center">
-🌟&nbsp;<a href="resources/WECHAT.md" target="_blank">Paper</a>&nbsp;·&nbsp;<a href="http://cogvlm2-online.cogviewai.cn:7861/" target="_blank">🤖 Demo</a>&nbsp;·&nbsp;<a href="http://cogvlm2-online.cogviewai.cn:7868/" target="_blank">📁 Dataset</a>
-</div> -->
-<!-- <div align="center">
-🤗 HF repo :&nbsp;&nbsp; <a href="http://cogvlm2-online.cogviewai.cn:7861/" target="_blank">VisionReward-Image </a>&nbsp;&nbsp;<a href="http://cogvlm2-online.cogviewai.cn:7861/" target="_blank">VisionReward-Video</a>
-</div> -->
 
-<!-- ## Updates -->
+VisionReward is a fine-grained and multi-dimensional reward model. We decompose human preferences in images and videos into multiple dimensions, each represented by a series of judgment questions, linearly weighted and summed to an interpretable and accurate score. To address the challenges of video quality assess-ment, we systematically analyze various dynamic features of videos, which helps VisionReward surpass VideoScore by 17.2% and achieve top performance for video preference prediction.
 
-## Overview
-We present **VisionReward**, a general strategy to aligning visual generation models——both image and video generation——with human preferences through a fine-grainedand multi-dimensional framework. We decompose human preferences in images and videos into multiple dimensions,each represented by **a series of judgment questions**, linearly weighted and summed to an interpretable and accuratescore. 
-
-To address the challenges of video quality assess-ment, we systematically analyze various dynamic features of videos, which helps VisionReward surpass VideoScore by 17.2% and achieve top performance for video preference prediction.
 <div align="center">
 <img src=asset/resource/overview.jpg width="90%"/> 
 </div>
