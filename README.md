@@ -1,7 +1,7 @@
 # VisionReward
 
 <p align="center">
-   📃 <a href="https://github.com/THUDM/VisionReward" target="_blank">Paper</a> • 🖼 <a href="https://github.com/THUDM/VisionReward" target="_blank">Dataset (Coming soon) </a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> <br>
+   📃 <a href="https://arxiv.org/abs/2412.21059" target="_blank">Paper</a> • 🖼 <a href="https://github.com/THUDM/VisionReward" target="_blank">Dataset (Coming soon) </a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> <br>
 </p>
 
 **VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation**
@@ -51,9 +51,16 @@ python inference-video.py --compare
 # output: better_video
 ```
 
-<!-- ## Citation
-If you find this work useful in your research, please consider citing:
+## Citation
+
 ```
-@article{zhang2023visionreward,
-  title={VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation},
-``` -->
+@misc{xu2024visionrewardfinegrainedmultidimensionalhuman,
+      title={VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation}, 
+      author={Jiazheng Xu and Yu Huang and Jiale Cheng and Yuanming Yang and Jiajun Xu and Yuan Wang and Wenbo Duan and Shen Yang and Qunlin Jin and Shurun Li and Jiayan Teng and Zhuoyi Yang and Wendi Zheng and Xiao Liu and Ming Ding and Xiaohan Zhang and Xiaotao Gu and Shiyu Huang and Minlie Huang and Jie Tang and Yuxiao Dong},
+      year={2024},
+      eprint={2412.21059},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2412.21059}, 
+}
+```
