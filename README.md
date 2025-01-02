@@ -19,6 +19,13 @@ Following the commands below to prepare the environment:
 ```
 pip install -r requirements.txt
 ```
+
+### Download the model
+You can download the pre-trained **VisionReward** models for images and videos from the following Hugging Face repositories:
+
+- **Image Reward Model**: [https://huggingface.co/THUDM/VisionReward-Image](https://huggingface.co/THUDM/VisionReward-Image)
+- **Video Reward Model**: [https://huggingface.co/THUDM/VisionReward-Video](https://huggingface.co/THUDM/VisionReward-Video)
+
 ### VQA Example
 Use the following code to perform a checklist query. You can view the available questions for images and videos in `VisionReward-Image/VisionReward_image_qa.txt` and `VisionReward-Video/VisionReward_video_qa.txt` respectively.
 ``` 

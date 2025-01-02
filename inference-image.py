@@ -16,7 +16,7 @@ from io import BytesIO
 import pandas as pd
 from PIL import Image
 import numpy as np
-import t2v_metrics
+import VisionReward-Image.t2v_metrics
 
 MASK_INDICES = [0, 1, 2]      # Indices of mask features in original list
 MASK_FEATURE_MAP = {
@@ -73,7 +73,7 @@ def main():
     parser.add_argument("--temperature", type=float, default=0.8, help='temperature for sampling')
     parser.add_argument("--version", type=str, default="vqa", choices=['chat', 'vqa', 'chat_old', 'base'], help='version of language process')
     parser.add_argument("--quant", choices=[8, 4], type=int, default=None, help='quantization bits')
-    parser.add_argument("--from_pretrained", type=str, default="THUDM/VisionReward-Image", help='pretrained ckpt')  # You need to first download the model from https://huggingface.co/THUDM/VisionReward-Image and then refer to its README to extract the checkpoint!
+    parser.add_argument("--from_pretrained", type=str, default="THUDM/VisionReward-Image", help='pretrained ckpt')  # You need to first download the model from https://huggingface.co/THUDM/VisionReward-Image and then refer to its README to extract the checkpoint.
     parser.add_argument("--tokenizer_path", type=str, default="meta-llama/Meta-Llama-3-8B-Instruct", help='tokenizer path')
     parser.add_argument("--fp16", action="store_true", help="Use fp16 precision")
     parser.add_argument("--bf16", action="store_true", help="Use bf16 precision")
