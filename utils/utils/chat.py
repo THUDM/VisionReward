@@ -27,7 +27,6 @@ def process_image(image_path, img_processor, cross_img_processor, image):
         pil_img = image.convert('RGB')
         img_dict = img_processor(pil_img)
         cross_img_dict = cross_img_processor(pil_img) if cross_img_processor is not None else {}
-        print(f"img_dict:{img_dict}")
         ret = (img_dict, pil_img, cross_img_dict)
     else:
         ret = image
@@ -60,17 +59,11 @@ def process_images(image_paths, img_processor, cross_img_processor, images):
 
     if len(batch_images) == 0:
         raise ValueError("No images were processed correctly.")
-    # 调试信息
-    # for i, img in enumerate(batch_images):
-    #     if any(v is None for v in img.values()):
-    #         print(f"Image {i} has None values: {img}")
-    # Concatenate all images to form a batch for each key in the image dictionaries
     batch_torch_images = {k: torch.cat([img[k] for img in batch_images if img[k] is not None], dim=0) for k in batch_images[0] if batch_images[0][k] is not None}
     batch_torch_images['position_ids'] = None
     batch_torch_images['attention_mask'] = batch_torch_images['attention_mask'].unsqueeze(1).unsqueeze(1)
     batch_cross_images = {k: torch.cat([img[k] for img in batch_cross_images if img[k] is not None], dim=0) for k in batch_cross_images[0] if batch_cross_images[0][k] is not None} if batch_cross_images else None
-    # print(f"batch_torch_images['images'].shape:{batch_torch_images['image'].shape}")
-    # print(f"batch_torch_images:{batch_torch_images}")
+
     return (batch_torch_images, pil_images, batch_cross_images)
 
 def chat(image_path, model, text_processor, img_processor,
@@ -266,7 +259,6 @@ def chat_batch(image_paths: list, model, text_processor, img_processor,
             strategy=strategy,
             **inputs
     )[0] # drop memory
-    print(f"output.shape:{output.shape}")
     if type(output) is not list:
         output_list = output.tolist()
     else:
@@ -278,7 +270,6 @@ def chat_batch(image_paths: list, model, text_processor, img_processor,
             response = text_processor.process_response(response)
         response = response.split(text_processor.sep)[-1].strip()
         response_list.append(response)
-    print(f"len(response_list):{len(response_list)}")
     return response_list,  history, (torch_image, pil_img, cross_image)
 
 

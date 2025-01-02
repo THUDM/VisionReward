@@ -15,6 +15,8 @@ from utils.models import VisualLlamaEVA
 from io import BytesIO
 import pandas as pd
 from PIL import Image
+import numpy as np
+import t2v_metrics
 
 MASK_INDICES = [0, 1, 2]      # Indices of mask features in original list
 MASK_FEATURE_MAP = {
@@ -31,8 +33,9 @@ def cal_score(args,image_path,prompt,model,text_processor_infer,image_processor)
     wegiht = weight_data['coef']
     intercept = weight_data['intercept']
     answer_list = []
-    alignment_score = 0.7
-    for ques in ques_data:
+    alignment_score = t2v_metrics.VQAScore(model='clip-flant5-xxl') # our recommended scoring model
+    alignment = alignment_score(images=[image_path], texts=[prompt])[0][0].cpu().item() 
+    for ques in tqdm(ques_data, f'scoring image:{image_path}'):
         try:
             response, _, _ = chat(
                 image_path=image_path,
@@ -58,9 +61,9 @@ def cal_score(args,image_path,prompt,model,text_processor_infer,image_processor)
         for feature_index in feature_indices:
             reward[feature_index] *= (int)(reward[mask_index] > 0)
     reward_filtered = [v for i, v in enumerate(reward) if i not in MASK_INDICES]
-    final_reward = [alignment_score] + reward_filtered
+    final_reward = [alignment] + reward_filtered
     score = np.dot(final_reward, wegiht) + intercept
-    return score
+    return score[0]
 
 def main():
     parser = argparse.ArgumentParser()
@@ -70,7 +73,7 @@ def main():
     parser.add_argument("--temperature", type=float, default=0.8, help='temperature for sampling')
     parser.add_argument("--version", type=str, default="vqa", choices=['chat', 'vqa', 'chat_old', 'base'], help='version of language process')
     parser.add_argument("--quant", choices=[8, 4], type=int, default=None, help='quantization bits')
-    parser.add_argument("--from_pretrained", type=str, default="THUDM/VisionReward-Image", help='pretrained ckpt')
+    parser.add_argument("--from_pretrained", type=str, default="THUDM/VisionReward-Image", help='pretrained ckpt')  # You need to first download the model from https://huggingface.co/THUDM/VisionReward-Image and then refer to its README to extract the checkpoint!
     parser.add_argument("--tokenizer_path", type=str, default="meta-llama/Meta-Llama-3-8B-Instruct", help='tokenizer path')
     parser.add_argument("--fp16", action="store_true", help="Use fp16 precision")
     parser.add_argument("--bf16", action="store_true", help="Use bf16 precision")
@@ -103,8 +106,6 @@ def main():
         if torch.cuda.is_available():
             model = model.cuda()
     model.add_mixin('auto-regressive', CachedAutoregressiveMixin())
-    start_id = args.start_id
-    end_id = args.end_id
     tokenizer = llama3_tokenizer(args.tokenizer_path, signal_type=args.version)
     image_processor = get_image_processor(model_args.eva_args["image_size"][0])
     text_processor_infer = llama2_text_processor_inference(tokenizer, args.max_length, model.image_length)
@@ -116,12 +117,12 @@ def main():
     
     with torch.no_grad():
         if args.score:
-            score = cal_score(args,image_path1,model,text_processor_infer,image_processor)
+            score = cal_score(args,image_path1,prompt,model,text_processor_infer,image_processor)
             print(f"score: {score}")
         else:
             ques = args.question
             response, _, _ = chat(
-                image_path=image_path,
+                image_path=image_path1,
                 image = None,
                 model=model,
                 text_processor=text_processor_infer,

@@ -23,3 +23,20 @@ gunicorn
 gevent
 requests
 gradio
+datasets
+scipy
+sentencepiece
+gdown
+tqdm
+ftfy
+regex
+# git+https://github.com/openai/CLIP.git
+open-clip-torch
+opencv-python
+opencv-python-headless
+pandas
+SwissArmyTransformer
+wandb
+omegaconf
+fairscale
+tiktoken
