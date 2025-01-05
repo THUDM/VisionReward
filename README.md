@@ -1,7 +1,7 @@
 # VisionReward
 
 <p align="center">
-   📃 <a href="https://arxiv.org/abs/2412.21059" target="_blank">Paper</a> • 🖼 <a href="https://github.com/THUDM/VisionReward" target="_blank">Dataset (Coming soon) </a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> <br>
+   📃 <a href="https://arxiv.org/abs/2412.21059" target="_blank">Paper</a> • 🖼 <a href="https://github.com/THUDM/VisionReward" target="_blank">Dataset (Coming soon) </a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> • 🌐 <a href="https://zhuanlan.zhihu.com/p/16481080277" target="_blank">中文博客</a> <br>
 </p>
 
 **VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation**
@@ -57,6 +57,12 @@ python inference-video.py --compare
 # input: video_path1 + video_path2 + prompt
 # output: better_video
 ```
+
+## Demos of VisionReward
+
+<p align="center">
+    <img src="asset/resource/VisionReward_demo.jpg" width="700px">
+</p>
 
 ## Citation
 
