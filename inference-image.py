@@ -16,7 +16,7 @@ from io import BytesIO
 import pandas as pd
 from PIL import Image
 import numpy as np
-import VisionReward-Image.t2v_metrics
+import VisionReward_Image.t2v_metrics.VQAScore as VQAScore
 
 MASK_INDICES = [0, 1, 2]      # Indices of mask features in original list
 MASK_FEATURE_MAP = {
@@ -33,7 +33,7 @@ def cal_score(args,image_path,prompt,model,text_processor_infer,image_processor)
     wegiht = weight_data['coef']
     intercept = weight_data['intercept']
     answer_list = []
-    alignment_score = t2v_metrics.VQAScore(model='clip-flant5-xxl') # our recommended scoring model
+    alignment_score = VQAScore(model='clip-flant5-xxl') # our recommended scoring model
     alignment = alignment_score(images=[image_path], texts=[prompt])[0][0].cpu().item() 
     for ques in tqdm(ques_data, f'scoring image:{image_path}'):
         try:
@@ -78,8 +78,8 @@ def main():
     parser.add_argument("--fp16", action="store_true", help="Use fp16 precision")
     parser.add_argument("--bf16", action="store_true", help="Use bf16 precision")
     parser.add_argument("--stream_chat", action="store_true")
-    parser.add_argument("--ques_file", type=str, default="VisionReward-Image/VisionReward_image_qa_select.txt", help="Path to the meta question file")
-    parser.add_argument("--weight_file", type=str, default="VisionReward-Image/weight_select.json", help="Path to the weight file")
+    parser.add_argument("--ques_file", type=str, default="VisionReward_Image/VisionReward_image_qa_select.txt", help="Path to the meta question file")
+    parser.add_argument("--weight_file", type=str, default="VisionRewardImage/weight_select.json", help="Path to the weight file")
     parser.add_argument('--question', type=str, help='Question to be answered', default='Is the image clear?')
     parser.add_argument('--score', help='Whether to output the score', default=False, action='store_true')
     args = parser.parse_args()

@@ -8,8 +8,8 @@ import argparse
 from tqdm import tqdm
 
 MODEL_PATH = "THUDM/VisionReward-Video"
-QUESTIONS_PATH = "VisionReward-Video/VisionReward_video_qa_select.txt"
-WEIGHT_PATH = "VisionReward-Video/weight.json"
+QUESTIONS_PATH = "VisionReward_Video/VisionReward_video_qa_select.txt"
+WEIGHT_PATH = "VisionReward_Video/weight.json"
 
 with open(QUESTIONS_PATH, 'r') as f:
     questions = f.readlines()
@@ -21,7 +21,6 @@ with open(WEIGHT_PATH, 'r') as f:
 DEVICE = 'cuda' if torch.cuda.is_available() else 'cpu'
 TORCH_TYPE = torch.bfloat16 if torch.cuda.is_available() and torch.cuda.get_device_capability()[
     0] >= 8 else torch.float16
-
 
 
 tokenizer = AutoTokenizer.from_pretrained(
@@ -36,20 +35,6 @@ model = AutoModelForCausalLM.from_pretrained(
     trust_remote_code=True
 ).eval().to(DEVICE)
 
-# if DEVICE == 'cuda':
-#     model.half()  # Converts to FP16
-
-# model.push_to_hub("VisionReward-Video")
-# tokenizer.push_to_hub("VisionReward-Video")
-
-
-# def test():
-#     # prompt = "When the man begin to play basketball?"
-#     prompt = "Please describe this video in detail."
-#     temperature = 0.1
-#     video_data = open('asset/test/ikun.mp4', 'rb').read()
-#     response = predict(prompt, video_data, temperature)
-#     print(response)
 
 def load_video(video_data, strategy='chat'):
     bridge.set_bridge('torch')
@@ -77,11 +62,8 @@ def load_video(video_data, strategy='chat'):
             frame_id_list.append(index)
             if len(frame_id_list) >= num_frames:
                 break
-    # print(type(frame_id_list[0]))
     video_data = decord_vr.get_batch(frame_id_list)
-    # print(type(video_data[0]))
     video_data = video_data.permute(3, 0, 1, 2)
-    # print(video_data.shape)
     return video_data
 
 def inference(video_path, query, temperature=0.1):
@@ -93,7 +75,6 @@ def inference(video_path, query, temperature=0.1):
     history = []
 
     yes_token_id = tokenizer.encode("Yes")[0]
-    # no_token_id = tokenizer.encode("No")[0]
 
     inputs = model.build_conversation_input_ids(
             tokenizer=tokenizer,
@@ -161,8 +142,6 @@ if __name__ == '__main__':
 
     video1 = './asset/test/test1.mp4'
     video2 = './asset/test/test2.mp4'
-    # print(args)
-
     prompt = 'Multiple elephants inhabit a surreal and dystopian urban landscape where towering trees emerge from the cracked city streets, their roots intertwining with skyscrapers, under an eerie, blood-red sky that looms overhead.'
 
     if args.score:

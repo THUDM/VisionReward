@@ -27,7 +27,7 @@ You can download the pre-trained **VisionReward** models for images and videos f
 - **Video Reward Model**: [https://huggingface.co/THUDM/VisionReward-Video](https://huggingface.co/THUDM/VisionReward-Video)
 
 ### VQA Example
-Use the following code to perform a checklist query. You can view the available questions for images and videos in `VisionReward-Image/VisionReward_image_qa.txt` and `VisionReward-Video/VisionReward_video_qa.txt` respectively.
+Use the following code to perform a checklist query. You can view the available questions for images and videos in `VisionReward_Image/VisionReward_image_qa.txt` and `VisionReward_Video/VisionReward_video_qa.txt` respectively.
 ``` 
 python inference-image.py --bf16 --question [[your_question]]
 # input: image_path + prompt + question
@@ -39,7 +39,7 @@ python inference-video.py --question [[your_question]]
 ```
 
 ### Using the model for scoring
-Use the following code to score images/videos. The corresponding weights are in `VisionReward-Image/weight.json` and `VisionReward-Video/weight.json`.
+Use the following code to score images/videos. The corresponding weights are in `VisionReward_Image/weight.json` and `VisionReward_Video/weight.json`.
 ``` 
 python inference-image.py --bf16 --score 
 # input: image_path + prompt
