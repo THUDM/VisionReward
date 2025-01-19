@@ -16,7 +16,7 @@ from io import BytesIO
 import pandas as pd
 from PIL import Image
 import numpy as np
-import VisionReward_Image.t2v_metrics.VQAScore as VQAScore
+from VisionReward_Image.t2v_metrics.vqascore import VQAScore
 
 MASK_INDICES = [0, 1, 2]      # Indices of mask features in original list
 MASK_FEATURE_MAP = {
