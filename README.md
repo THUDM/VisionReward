@@ -25,13 +25,13 @@ VisionReward is a fine-grained and multi-dimensional reward model. We decompose 
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr style="background-color: #f9f9f9;">
       <td style="border: 2px solid #000; padding: 8px;">VisionReward-Image</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://github.com/THUDM/CogVLM2" target="_blank">cogvlm2-llama3-chat-19B</a></td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Image" target="_blank">🤗 Huggingface</a></td>
       <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
     </tr>
-    <tr style="background-color: #f9f9f9;">
+    <tr>
       <td style="border: 2px solid #000; padding: 8px;">VisionReward-Video</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://github.com/THUDM/CogVLM2" target="_blank">cogvlm2-video-llama3-chat</a></td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">🤗 Huggingface</a></td>
@@ -52,13 +52,13 @@ VisionReward is a fine-grained and multi-dimensional reward model. We decompose 
     </tr>
   </thead>
   <tbody>
-    <tr>
+    <tr style="background-color: #f9f9f9;">
       <td style="border: 2px solid #000; padding: 8px;">VisionRewardDB-Image</td>
       <td style="border: 2px solid #000; padding: 8px;">48K * 60 (dimensions)</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Image" target="_blank">🤗 Huggingface</a></td>
       <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
     </tr>
-    <tr style="background-color: #f9f9f9;">
+    <tr>
       <td style="border: 2px solid #000; padding: 8px;">VisionRewardDB-Video</td>
       <td style="border: 2px solid #000; padding: 8px;">33K * 64 (dimensions)</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">🤗 Huggingface</a></td>
@@ -75,11 +75,6 @@ Following the commands below to prepare the environment:
 pip install -r requirements.txt
 ```
 
-### Download the model
-You can download the pre-trained **VisionReward** models for images and videos from the following Hugging Face repositories:
-
-- **Image Reward Model**: [https://huggingface.co/THUDM/VisionReward-Image](https://huggingface.co/THUDM/VisionReward-Image)
-- **Video Reward Model**: [https://huggingface.co/THUDM/VisionReward-Video](https://huggingface.co/THUDM/VisionReward-Video)
 
 ### VQA Example
 Use the following code to perform a checklist query. You can view the available questions for images and videos in `VisionReward_Image/VisionReward_image_qa.txt` and `VisionReward_Video/VisionReward_video_qa.txt` respectively.
