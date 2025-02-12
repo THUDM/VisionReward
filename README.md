@@ -1,12 +1,10 @@
-# VisionReward
+# **VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation**
 
 <p align="center">
    📃 <a href="https://arxiv.org/abs/2412.21059" target="_blank">Paper</a> • 🖼 <a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">Dataset</a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> • 🌐 <a href="https://zhuanlan.zhihu.com/p/16481080277" target="_blank">中文博客</a> <br>
 </p>
 
-# **VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation**
-
-VisionReward is a fine-grained, multi-dimensional reward model designed to capture human preferences in images and videos. By breaking down subjective judgments into interpretable dimensions with weighted scoring, it delivers precise and comprehensive evaluations. Excelling in video quality prediction, VisionReward sets a new benchmark by thoroughly analyzing dynamic video features.  
+**VisionReward** is a fine-grained, multi-dimensional reward model designed to capture human preferences in images and videos. By breaking down subjective judgments into interpretable dimensions with weighted scoring, it delivers precise and comprehensive evaluations. Excelling in video quality prediction, VisionReward sets a new benchmark by thoroughly analyzing dynamic video features.  
 
 ✨ **Key Highlights**:
 - **SOTA Performance:** VisionReward achieves **64.0 (Tau)** / **72.1 (Diff)** on **[Monetbench](https://huggingface.co/datasets/THUDM/VisionRewardDB-Video/viewer/monetbench)**, surpassing **VideoScore** by 17.2% and setting a new **state-of-the-art**!  
