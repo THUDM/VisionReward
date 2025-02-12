@@ -1,7 +1,7 @@
 # VisionReward
 
 <p align="center">
-   📃 <a href="https://arxiv.org/abs/2412.21059" target="_blank">Paper</a> • 🖼 <a href="https://github.com/THUDM/VisionReward" target="_blank">Dataset (Coming soon) </a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> • 🌐 <a href="https://zhuanlan.zhihu.com/p/16481080277" target="_blank">中文博客</a> <br>
+   📃 <a href="https://arxiv.org/abs/2412.21059" target="_blank">Paper</a> • 🖼 <a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">Dataset </a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> • 🌐 <a href="https://zhuanlan.zhihu.com/p/16481080277" target="_blank">中文博客</a> <br>
 </p>
 
 **VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation**
@@ -11,6 +11,61 @@ VisionReward is a fine-grained and multi-dimensional reward model. We decompose 
 <div align="center">
 <img src=asset/resource/overview.jpg width="90%"/> 
 </div>
+
+## Release
+
+
+<table style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif; border: 2px solid #000;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 2px solid #000; padding: 8px; font-weight: bold;">📋 Model</th>
+      <th style="border: 2px solid #000; padding: 8px; font-weight: bold;">🧠 Base Model</th>
+      <th style="border: 2px solid #000; padding: 8px; font-weight: bold;">🤗 HF Link</th>
+      <th style="border: 2px solid #000; padding: 8px; font-weight: bold;">🤖 MS Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 2px solid #000; padding: 8px;">VisionReward-Image</td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://github.com/THUDM/CogVLM2" target="_blank">cogvlm2-llama3-chat-19B</a></td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Image" target="_blank">🤗 Huggingface</a></td>
+      <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="border: 2px solid #000; padding: 8px;">VisionReward-Video</td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://github.com/THUDM/CogVLM2" target="_blank">cogvlm2-video-llama3-chat</a></td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">🤗 Huggingface</a></td>
+      <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<table style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif; border: 2px solid #000;">
+  <thead>
+    <tr style="background-color: #f2f2f2;">
+      <th style="border: 2px solid #000; padding: 8px; font-weight: bold;">📋 Dataset</th>
+      <th style="border: 2px solid #000; padding: 8px; font-weight: bold;">📝 Annotation</th>
+      <th style="border: 2px solid #000; padding: 8px; font-weight: bold;">🤗 HF Link</th>
+      <th style="border: 2px solid #000; padding: 8px; font-weight: bold;">🤖 MS Link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border: 2px solid #000; padding: 8px;">VisionRewardDB-Image</td>
+      <td style="border: 2px solid #000; padding: 8px;">48K * 60 (dimensions)</td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Image" target="_blank">🤗 Huggingface</a></td>
+      <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
+    </tr>
+    <tr style="background-color: #f9f9f9;">
+      <td style="border: 2px solid #000; padding: 8px;">VisionRewardDB-Video</td>
+      <td style="border: 2px solid #000; padding: 8px;">33K * 64 (dimensions)</td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">🤗 Huggingface</a></td>
+      <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
+    </tr>
+  </tbody>
+</table>
 
 ## Quick Start
 
