@@ -1,20 +1,27 @@
 # VisionReward
 
 <p align="center">
-   📃 <a href="https://arxiv.org/abs/2412.21059" target="_blank">Paper</a> • 🖼 <a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">Dataset </a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> • 🌐 <a href="https://zhuanlan.zhihu.com/p/16481080277" target="_blank">中文博客</a> <br>
+   📃 <a href="https://arxiv.org/abs/2412.21059" target="_blank">Paper</a> • 🖼 <a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">Dataset</a> • 🤗 <a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">HF Repo</a> • 🌐 <a href="https://zhuanlan.zhihu.com/p/16481080277" target="_blank">中文博客</a> <br>
 </p>
 
-**VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation**
+# **VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation**
 
-VisionReward is a fine-grained and multi-dimensional reward model. We decompose human preferences in images and videos into multiple dimensions, each represented by a series of judgment questions, linearly weighted and summed to an interpretable and accurate score. To address the challenges of video quality assessment, we systematically analyze various dynamic features of videos, which helps VisionReward surpass VideoScore by 17.2% and achieve top performance for video preference prediction.
+VisionReward is a fine-grained, multi-dimensional reward model tailored for assessing human preferences in both images and videos. By decomposing human subjective judgments into multiple interpretable dimensions, each represented as a series of assessment questions, VisionReward achieves remarkable alignment with human perception. The model computes a weighted sum of these dimensions, resulting in comprehensive, accurate scoring for image and video content. Notably, VisionReward excels in video quality prediction, systematically analyzing dynamic features of videos to set a new benchmark in video quality assessment.
+
+✨ **Key Highlights**:
+- **SOTA Performance:** VisionReward achieves **64.0 (Tau)** / **72.1 (Diff)** on **[Monetbench](https://huggingface.co/datasets/THUDM/VisionRewardDB-Video/viewer/monetbench)**, surpassing **VideoScore** by 17.2% and setting a new **state-of-the-art**!  
+- **Fine-Grained Multidimensional Dataset**: A rich, high-quality dataset with detailed annotations drives VisionReward’s precise understanding of human preferences across images and videos.
+- **Interpretable Scoring:** The decomposed model structure ensures that every generated score is fully interpretable, paving new possibilities for content generation applications.  
 
 <div align="center">
-<img src=asset/resource/overview.jpg width="90%"/> 
+<img src="asset/resource/overview.jpg" width="90%"/> 
 </div>
 
-## Release
+---
 
+## 🚀 Release Information
 
+### ✨ **Models**
 <table style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif; border: 2px solid #000;">
   <thead>
     <tr style="background-color: #f2f2f2;">
@@ -40,8 +47,9 @@ VisionReward is a fine-grained and multi-dimensional reward model. We decompose 
   </tbody>
 </table>
 
-<br>
+---
 
+### 🎨 **Datasets**
 <table style="border-collapse: collapse; width: 100%; text-align: center; font-family: Arial, sans-serif; border: 2px solid #000;">
   <thead>
     <tr style="background-color: #f2f2f2;">
@@ -67,55 +75,69 @@ VisionReward is a fine-grained and multi-dimensional reward model. We decompose 
   </tbody>
 </table>
 
-## Quick Start
+---
 
-### Set Up the Environment
-Following the commands below to prepare the environment:
+## 🔧 Quick Start
+
+### **Set Up the Environment**
+Run the following commands to install dependencies:
 ```
 pip install -r requirements.txt
 ```
 
+---
 
-### VQA Example
-Use the following code to perform a checklist query. You can view the available questions for images and videos in `VisionReward_Image/VisionReward_image_qa.txt` and `VisionReward_Video/VisionReward_video_qa.txt` respectively.
-``` 
+### **Run VQA (Vision-Question-Answering)**
+Perform a checklist query using the commands below. Available image and video questions can be found in `VisionReward_Image/VisionReward_image_qa.txt` and `VisionReward_Video/VisionReward_video_qa.txt`, respectively.
+```
+# For Image QA
 python inference-image.py --bf16 --question [[your_question]]
-# input: image_path + prompt + question
-# output: yes/no
+# Input: image_path + prompt + question
+# Output: yes/no
 
+# For Video QA
 python inference-video.py --question [[your_question]]
-# input: video_path + prompt + question
-# output: yes/no
+# Input: video_path + prompt + question
+# Output: yes/no
 ```
 
-### Using the model for scoring
-Use the following code to score images/videos. The corresponding weights are in `VisionReward_Image/weight.json` and `VisionReward_Video/weight.json`.
-``` 
+---
+
+### **Scoring with VisionReward**
+Calculate scores for images/videos with the following commands. The corresponding weights are in `VisionReward_Image/weight.json` and `VisionReward_Video/weight.json`.
+```
+# Scoring an Image
 python inference-image.py --bf16 --score 
-# input: image_path + prompt
-# output: score
+# Input: image_path + prompt
+# Output: score
 
+# Scoring a Video
 python inference-video.py --score
-# input: video_path + prompt
-# output: score
+# Input: video_path + prompt
+# Output: score
 ```
 
-### Using the model for comparing two videos
-Use the following code to compare two videos. The corresponding weights are in `VisionReward-Video/weight.json`.
+---
+
+### **Compare Two Videos**
+Directly compare the quality of two videos, leveraging the weights in `VisionReward_Video/weight.json`.
 ```
 python inference-video.py --compare
-# input: video_path1 + video_path2 + prompt
-# output: better_video
+# Input: video_path1 + video_path2 + prompt
+# Output: better_video
 ```
 
-## Demos of VisionReward
+---
+
 
 <p align="center">
-    <img src="asset/resource/VisionReward_demo.jpg" width="700px">
+    <img src="asset/resource/VisionReward_demo.jpg" width="800px">
 </p>
 
-## Citation
+---
 
+## 📚 Citation
+If you find VisionReward helpful, please cite us:
 ```
 @misc{xu2024visionrewardfinegrainedmultidimensionalhuman,
       title={VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation}, 
