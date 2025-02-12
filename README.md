@@ -6,7 +6,7 @@
 
 # **VisionReward: Fine-Grained Multi-Dimensional Human Preference Learning for Image and Video Generation**
 
-VisionReward is a fine-grained, multi-dimensional reward model tailored for assessing human preferences in both images and videos. By decomposing human subjective judgments into multiple interpretable dimensions, each represented as a series of assessment questions, VisionReward achieves remarkable alignment with human perception. The model computes a weighted sum of these dimensions, resulting in comprehensive, accurate scoring for image and video content. Notably, VisionReward excels in video quality prediction, systematically analyzing dynamic features of videos to set a new benchmark in video quality assessment.
+VisionReward is a fine-grained, multi-dimensional reward model designed to capture human preferences in images and videos. By breaking down subjective judgments into interpretable dimensions with weighted scoring, it delivers precise and comprehensive evaluations. Excelling in video quality prediction, VisionReward sets a new benchmark by thoroughly analyzing dynamic video features.  
 
 ✨ **Key Highlights**:
 - **SOTA Performance:** VisionReward achieves **64.0 (Tau)** / **72.1 (Diff)** on **[Monetbench](https://huggingface.co/datasets/THUDM/VisionRewardDB-Video/viewer/monetbench)**, surpassing **VideoScore** by 17.2% and setting a new **state-of-the-art**!  
