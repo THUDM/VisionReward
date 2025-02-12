@@ -56,13 +56,13 @@ VisionReward is a fine-grained and multi-dimensional reward model. We decompose 
       <td style="border: 2px solid #000; padding: 8px;">VisionRewardDB-Image</td>
       <td style="border: 2px solid #000; padding: 8px;">48K * 60 (dimensions)</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Image" target="_blank">🤗 Huggingface</a></td>
-      <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Image" target="_blank">🤖 ModelScope (coming soon)</a></td>
     </tr>
     <tr style="background-color: #f9f9f9;">
       <td style="border: 2px solid #000; padding: 8px;">VisionRewardDB-Video</td>
       <td style="border: 2px solid #000; padding: 8px;">33K * 64 (dimensions)</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">🤗 Huggingface</a></td>
-      <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">🤖 ModelScope (coming soon)</a></td>
     </tr>
   </tbody>
 </table>
