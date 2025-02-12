@@ -29,13 +29,13 @@ VisionReward is a fine-grained and multi-dimensional reward model. We decompose 
       <td style="border: 2px solid #000; padding: 8px;">VisionReward-Image</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://github.com/THUDM/CogVLM2" target="_blank">cogvlm2-llama3-chat-19B</a></td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Image" target="_blank">🤗 Huggingface</a></td>
-      <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Image" target="_blank">🤖 ModelScope (coming soon)</a></td>
     </tr>
-    <tr>
+    <tr style="background-color: #f9f9f9;">
       <td style="border: 2px solid #000; padding: 8px;">VisionReward-Video</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://github.com/THUDM/CogVLM2" target="_blank">cogvlm2-video-llama3-chat</a></td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">🤗 Huggingface</a></td>
-      <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">🤖 ModelScope (coming soon)</a></td>
     </tr>
   </tbody>
 </table>
@@ -58,7 +58,7 @@ VisionReward is a fine-grained and multi-dimensional reward model. We decompose 
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Image" target="_blank">🤗 Huggingface</a></td>
       <td style="border: 2px solid #000; padding: 8px;">[🤖 ModelScope (coming soon)]()</td>
     </tr>
-    <tr>
+    <tr style="background-color: #f9f9f9;">
       <td style="border: 2px solid #000; padding: 8px;">VisionRewardDB-Video</td>
       <td style="border: 2px solid #000; padding: 8px;">33K * 64 (dimensions)</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">🤗 Huggingface</a></td>
