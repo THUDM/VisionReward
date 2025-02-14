@@ -35,13 +35,13 @@
       <td style="border: 2px solid #000; padding: 8px;">VisionReward-Image</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://github.com/THUDM/CogVLM2" target="_blank">cogvlm2-llama3-chat-19B</a></td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Image" target="_blank">🤗 Huggingface</a></td>
-      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Image" target="_blank">🤖 ModelScope (coming soon)</a></td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://www.modelscope.cn/models/ZhipuAI/VisionReward-Image" target="_blank">🤖 ModelScope</a></td>
     </tr>
     <tr style="background-color: #f9f9f9;">
       <td style="border: 2px solid #000; padding: 8px;">VisionReward-Video</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://github.com/THUDM/CogVLM2" target="_blank">cogvlm2-video-llama3-chat</a></td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">🤗 Huggingface</a></td>
-      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/THUDM/VisionReward-Video" target="_blank">🤖 ModelScope (coming soon)</a></td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://www.modelscope.cn/models/ZhipuAI/VisionReward-Video" target="_blank">🤖 ModelScope</a></td>
     </tr>
   </tbody>
 </table>
@@ -63,13 +63,13 @@
       <td style="border: 2px solid #000; padding: 8px;">VisionRewardDB-Image</td>
       <td style="border: 2px solid #000; padding: 8px;">48K * 60 (dimensions)</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Image" target="_blank">🤗 Huggingface</a></td>
-      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Image" target="_blank">🤖 ModelScope (coming soon)</a></td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://www.modelscope.cn/datasets/ZhipuAI/VisionRewardDB-Image" target="_blank">🤖 ModelScope</a></td>
     </tr>
     <tr style="background-color: #f9f9f9;">
       <td style="border: 2px solid #000; padding: 8px;">VisionRewardDB-Video</td>
       <td style="border: 2px solid #000; padding: 8px;">33K * 64 (dimensions)</td>
       <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">🤗 Huggingface</a></td>
-      <td style="border: 2px solid #000; padding: 8px;"><a href="https://huggingface.co/datasets/THUDM/VisionRewardDB-Video" target="_blank">🤖 ModelScope (coming soon)</a></td>
+      <td style="border: 2px solid #000; padding: 8px;"><a href="https://www.modelscope.cn/datasets/ZhipuAI/VisionRewardDB-Video" target="_blank">🤖 ModelScope</a></td>
     </tr>
   </tbody>
 </table>
