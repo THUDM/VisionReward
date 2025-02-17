@@ -5,7 +5,6 @@ import argparse
 import torch
 from tqdm import tqdm  # Import tqdm for the progress bar
 from sat.model.mixins import CachedAutoregressiveMixin
-from sat.quantization.kernels import quantize
 from sat.model import AutoModel
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils.utils import chat, llama2_tokenizer, llama2_text_processor_inference, get_image_processor
@@ -72,7 +71,6 @@ def main():
     parser.add_argument("--top_k", type=int, default=1, help='top k for top k sampling')
     parser.add_argument("--temperature", type=float, default=0.8, help='temperature for sampling')
     parser.add_argument("--version", type=str, default="vqa", choices=['chat', 'vqa', 'chat_old', 'base'], help='version of language process')
-    parser.add_argument("--quant", choices=[8, 4], type=int, default=None, help='quantization bits')
     parser.add_argument("--from_pretrained", type=str, default="THUDM/VisionReward-Image", help='pretrained ckpt')  # You need to first download the model from https://huggingface.co/THUDM/VisionReward-Image and then refer to its README to extract the checkpoint.
     parser.add_argument("--tokenizer_path", type=str, default="meta-llama/Meta-Llama-3-8B-Instruct", help='tokenizer path')
     parser.add_argument("--fp16", action="store_true", help="Use fp16 precision")
@@ -95,16 +93,12 @@ def main():
             model_parallel_size=1,
             mode='inference',
             skip_init=True,
-            use_gpu_initialization=not args.quant,
-            device='cpu' if args.quant else 'cuda',
+            use_gpu_initialization=True,
+            device='cuda',
             **vars(args)
         )
     )
     model = model.eval()
-    if args.quant:
-        quantize(model, args.quant)
-        if torch.cuda.is_available():
-            model = model.cuda()
     model.add_mixin('auto-regressive', CachedAutoregressiveMixin())
     tokenizer = llama3_tokenizer(args.tokenizer_path, signal_type=args.version)
     image_processor = get_image_processor(model_args.eva_args["image_size"][0])
